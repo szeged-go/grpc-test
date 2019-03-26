@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package registration;
+
+service Registration { rpc Register(Request) returns (Response); }
+
+message Request {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message Response { string status = 1; }
